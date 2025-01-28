@@ -3,16 +3,16 @@ from flask import Flask, session, redirect, request, render_template, send_file
 import fitz  # PyMuPDF
 import google.generativeai as gga
 from fpdf import FPDF
-from functools import wraps
+from tempfile import NamedTemporaryFile
 
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
-app.secret_key = "CodeSpecialist.com"
+app.secret_key = "APP_SECRET_KEY"
 
 # Google Generative AI API configuration
-gga.configure(api_key='AIzaSyD26Re1PMGq9mL8m3R7u2ZeJURG3a9oXLM')
+gga.configure(api_key='GOOGLE_API_KEY')
 
 # PDF Reading Function
 def read_pdf_lines(file_path):
@@ -58,10 +58,10 @@ def question_generator():
     if request.method == "POST":
         uploaded_file = request.files['file']
         if uploaded_file and uploaded_file.filename.endswith('.pdf'):
-            file_path = os.path.join("uploads", uploaded_file.filename)
-            uploaded_file.save(file_path)
-            lines = read_pdf_lines(file_path)
-            topics = "\n".join(lines)
+            with NamedTemporaryFile(delete=False, suffix=".pdf") as temp_file:
+                uploaded_file.save(temp_file.name)
+                lines = read_pdf_lines(temp_file.name)
+                topics = "\n".join(lines)
 
             prompt = f'''
                 Instructions for Question Generation:
@@ -93,5 +93,5 @@ def logout():
 
 if __name__ == "__main__":
     if not os.path.exists("uploads"):
-        os.makedirs("uploads")
+        os.makedirs("uploads", exist_ok = True)
     app.run(debug=True)
