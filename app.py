@@ -9,10 +9,10 @@ app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
-app.secret_key = "APP_SECRET_KEY"
+app.secret_key = "CodeSpecialist.com"
 
 # Google Generative AI API configuration
-gga.configure(api_key='GOOGLE_API_KEY')
+gga.configure(api_key='AIzaSyD26Re1PMGq9mL8m3R7u2ZeJURG3a9oXLM')
 
 # PDF Reading Function
 def read_pdf_lines(file_path):
