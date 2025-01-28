@@ -43,8 +43,11 @@ def save_question_paper_to_pdf(questions, file_name="question_paper.pdf"):
         pdf.set_font("Arial", size=12)
         for question in questions:
             pdf.multi_cell(0, 10, txt=question)
-        pdf.output(file_name)
-        return file_name
+        
+        # Create a temporary file to save the PDF
+        with NamedTemporaryFile(delete=False, suffix=".pdf") as temp_pdf:
+            pdf.output(temp_pdf.name)
+            return temp_pdf.name  # Return the path to the temporary file
     except Exception as e:
         return f"Error in generating PDF: {str(e)}"
 
