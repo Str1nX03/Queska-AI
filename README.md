@@ -129,3 +129,8 @@ Queska AI can be used by:
 - 🧑‍💼 User authentication & dashboards
 - 🔎 Keyword-based or concept-based paper generation
 - 🌐 Multilingual generation support
+
+## 📬 Contact
+*For queries, suggestions or collaboration:-*
+- 📧 Email: dravin.ksharma@gmail.com
+- 🔗 LinkedIn: Dravin Kumar Sharma
