@@ -89,3 +89,66 @@ python -m venv venv
 source venv/bin/activate   # Linux/macOS
 venv\Scripts\activate      # Windows
 ```
+3. **Install required dependencies**
+```
+pip install -r requirements.txt
+```
+4. **Add your API key to the .env file**
+```
+GOOGLE_API_KEY='your_google_gemini_api_key'
+```
+💡 Replace your ```_google_gemini_api_key``` with your actual Gemini API key from ```https://aistudio.google.com/apikey```
+5. **Run the application**
+```
+python app.py
+```
+6. **Visit the local server in your browser**
+```
+http://127.0.0.1:5000
+```
+
+## Architecture / Workflow
+   +--------------------+
+   |  User Interface    |
+   | (HTML/CSS Frontend)|
+   +--------------------+
+            |
+            v
+   +--------------------+
+   |     Flask App      |
+   |    (Python Backend)|
+   +--------------------+
+            |
+            v
+   +----------------------------+
+   |  Gemini API Integration    |
+   |  (Prompt + Syllabus Input) |
+   +----------------------------+
+            |
+            v
+   +----------------------------+
+   |   Question Paper Output    |
+   | (Structured HTML Template) |
+   +----------------------------+
+
+## 🧪 Usage
+Queska AI can be used by:
+
+- 🧑‍🎓 Students — For practicing question papers
+- 👩‍🏫 Tuition teachers & coaching institutes — To auto-generate test series
+- 🏛️ Educational institutions — For creating question banks and mocks
+
+*Usage Steps:-*
+
+- Upload your syllabus (in .txt or .pdf format)
+- Select your desired difficulty level
+- Click "Generate"
+- Instantly receive a complete question paper
+
+## 🔮 Future Scope
+- 📦 Export to PDF/Doc
+- 📚 Support for predefined exam patterns (e.g., CBSE, UPSC, NEET, GATE)
+- 🧩 Ability to choose between MCQs, short/long questions
+- 🧑‍💼 User authentication & dashboards
+- 🔎 Keyword-based or concept-based paper generation
+- 🌐 Multilingual generation support
