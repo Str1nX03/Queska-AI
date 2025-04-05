@@ -120,4 +120,3 @@ Queska AI can be used by:
 ## 📬 Contact
 *For queries, suggestions or collaboration:-*
 - 📧 Email: dravin.ksharma@gmail.com
-- 🔗 LinkedIn: Dravin Kumar Sharma
