@@ -58,7 +58,7 @@
 > Follow these steps to run the project locally:
 
 ### ✅ Prerequisites:
-- Python 3.12+
+- Python 3.12.8
 - Google Gemini API key from: [https://aistudio.google.com/apikey](https://aistudio.google.com/apikey)
 
 ---
