@@ -79,6 +79,13 @@
 ### 🔧 Setup Instructions:
 
 1. **Clone the repository**
-```bash
+```
 git clone https://github.com/Str1nX03/Queska-AI.git
 cd Queska-AI
+```
+2. **Create a virtual environment**
+```
+python -m venv venv
+source venv/bin/activate   # Linux/macOS
+venv\Scripts\activate      # Windows
+```
