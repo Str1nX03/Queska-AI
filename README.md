@@ -33,12 +33,8 @@
 - [Tech Stack](#-tech-stack)
 - [Installation](#-installation)
 - [Usage](#-usage)
-- [Architecture](#-architecture)
-- [API Integration](#-api-integration)
 - [Future Scope](#-future-scope)
-- [Contributing](#-contributing)
 - [Contact](#-contact)
-- [License](#-license)
 
 ---
 
