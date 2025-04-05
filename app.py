@@ -12,7 +12,7 @@ app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 app.secret_key = "CodeSpecialist.com"
 
 # Google Generative AI API configuration
-gga.configure(api_key='AIzaSyD26Re1PMGq9mL8m3R7u2ZeJURG3a9oXLM')
+gga.configure(api_key = env_vars.get('GOOGLE_API_KEY'))
 
 # PDF Reading Function
 def read_pdf_lines(file_path):
