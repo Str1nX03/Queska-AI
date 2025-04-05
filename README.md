@@ -107,29 +107,6 @@ python app.py
 http://127.0.0.1:5000
 ```
 
-## Architecture / Workflow
-   +--------------------+
-   |  User Interface    |
-   | (HTML/CSS Frontend)|
-   +--------------------+
-            |
-            v
-   +--------------------+
-   |     Flask App      |
-   |    (Python Backend)|
-   +--------------------+
-            |
-            v
-   +----------------------------+
-   |  Gemini API Integration    |
-   |  (Prompt + Syllabus Input) |
-   +----------------------------+
-            |
-            v
-   +----------------------------+
-   |   Question Paper Output    |
-   | (Structured HTML Template) |
-   +----------------------------+
 
 ## 🧪 Usage
 Queska AI can be used by:
