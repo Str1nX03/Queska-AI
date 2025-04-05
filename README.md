@@ -84,7 +84,6 @@ pip install -r requirements.txt
 ```
 GOOGLE_API_KEY='your_google_gemini_api_key'
 ```
-💡 Replace your ```_google_gemini_api_key``` with your actual Gemini API key from ```https://aistudio.google.com/apikey```
 5. **Run the application**
 ```
 python app.py
