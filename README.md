@@ -18,15 +18,6 @@
 
 ---
 
-## 🖼️ Screenshots
-
-> _Note: Dark and Light theme users can both experience a clean UI — the design adapts responsively._
-
-![Home Page](https://via.placeholder.com/800x400?text=Queska+AI+Home+Page)
-![Generated Paper](https://via.placeholder.com/800x400?text=Generated+Question+Paper)
-
----
-
 ## 📌 Table of Contents
 
 - [Features](#-features)
